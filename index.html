@@ -60,27 +60,14 @@
             muted
           ></video>
         </div>
-
-        <!-- Buttons -->
-        <div class="buttonBox">
-          <div class="AnimationButtonDiv">
-            <button onclick="openGateFunction(this)" >
-              <i class="bi bi-toggle-off"></i> Animation
-            </button>
-          </div>
-
-          <div class="">
-            <button onclick="playMusic(this)" class="musicButton">
-              <i class="bi bi-toggle-off"></i> Music
-            </button>
-          </div>
-        </div>
       </section>
 
       <!-- PART - 2 -->
       <section class="part2">
         <!-- Images -->
-        <img src="./Assets/Img/EGYPT.png" class="egyptImage" alt="" />
+        <div class="egyptImageDiv">
+          <img src="./Assets/Img/EGYPT.png" class="egyptImage" alt="" />
+        </div>
         <img
           src="./Assets/Animation/universeImage.gif"
           class="universeImage"
@@ -113,28 +100,28 @@
             muted
           ></video>
         </div>
-
-        <!-- Buttons -->
-        <div class="buttonBox buttonBox2">
-          <div class="eygptButtonDiv">
-            <button onclick="egyptAnimation(this)">
-              <i class="bi bi-toggle-off"></i> Animation
-            </button>
-          </div>
-
-          <div class="RestartDiv">
-            <button onclick="RestartAnimation(this)">
-              <i class="bi bi-toggle-off"></i> Restart
-            </button>
-          </div>
-
-          <div class="">
-            <button onclick="playMusic(this)">
-              <i class="bi bi-toggle-off"></i> Music
-            </button>
-          </div>
-        </div>
       </section>
+
+      <!-- Buttons -->
+      <div class="buttonBox">
+        <div class="">
+          <button onclick="playMusic(this)" class="musicButton">
+            <i class="bi bi-toggle-off"></i> Music
+          </button>
+        </div>
+
+        <div class="AnimationButtonDiv">
+          <button onclick="openGateFunction(this)">
+            <i class="bi bi-toggle-off"></i> Start Animation
+          </button>
+        </div>
+
+        <div class="RestartDiv">
+          <button onclick="RestartAnimation(this)">
+            <i class="bi bi-toggle-off"></i> Restart
+          </button>
+        </div>
+      </div>
     </div>
   </body>
 

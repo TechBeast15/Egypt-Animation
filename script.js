@@ -1,238 +1,3 @@
-// const backgroundMusic = new Audio("Assets/Audio/AlanWalkerMashup.mp3");
-// backgroundMusic.loop = true;
-
-// window.onload = function () {
-//   const preloader = document.getElementById("preloader");
-//   const musicButton = document.querySelector(".musicButton");
-//   // Create the Enter button
-//   const enterButton = document.createElement("button");
-//   enterButton.id = "enterButton";
-//   enterButton.textContent = "Enter Site";
-//   preloader.appendChild(enterButton);
-
-//   enterButton.addEventListener("click", function () {
-//     preloader.classList.add("fade-out");
-
-//     setTimeout(() => {
-//       preloader.style.display = "none";
-//       document.getElementById("fullUI").style.display = "block";
-
-//       // Start music if needed
-//       backgroundMusic.play();
-//       musicButton.classList.add("ButtonClass");
-//       musicButton.innerHTML = '<i class="bi bi-toggle-on"></i> Music';
-//     }, 1000); // wait for fade-out transition
-//   });
-// };
-
-// const part1 = document.querySelector(".part1");
-// const part2 = document.querySelector(".part2");
-// part2.classList.add("hiddenClass");
-// const universeImage = document.querySelector(".universeImage");
-
-// let gate, waterfall, pyramid, partVisible, partHidden;
-
-// const GateSlide = new Audio("Assets/Audio/doorOpen.mp3");
-// GateSlide.volume = 0.1;
-
-// const fallingAudio = new Audio("Assets/Audio/falling.mp3");
-// fallingAudio.currentTime = 3;
-
-// function openGateFunction(element) {
-//   const pyramidImage = document.querySelector(".pyramidImage");
-//   const gateImage = document.querySelector(".gateImage");
-//   const waterfallImage = document.querySelector(".waterfallImage");
-//   const birdsFly = document.querySelector(".birdsFly");
-//   const AnimationButtonDiv = document.querySelector(".AnimationButtonDiv");
-//   const buttonBox2 = document.querySelector(".buttonBox2");
-
-//   element.classList.toggle("ButtonClass");
-
-//   if (element.classList.contains("ButtonClass")) {
-//     AnimationButtonDiv.style.display = "none";
-
-//     // Toggle ON
-//     element.innerHTML = `<i class="bi bi-toggle-on"></i> Animation`;
-//     GateSlide.currentTime = 0;
-//     GateSlide.play();
-
-//     gate = setTimeout(() => {
-//       gateImage.classList.add("slideGate");
-//     }, 2000);
-
-//     waterfall = setTimeout(() => {
-//       waterfallImage.classList.add("scaleUp");
-//       fallingAudio.play();
-//     }, 6000);
-
-//     pyramid = setTimeout(() => {
-//       pyramidImage.classList.add("opacityClass");
-//       gateImage.classList.add("opacityClass");
-//       birdsFly.classList.add("opacityClass");
-//     }, 10000);
-
-//     partVisible = setTimeout(() => {
-//       part1.classList.add("hiddenClass");
-//       part1.style.display = "none";
-//       part2.classList.remove("hiddenClass");
-//       part2.classList.add("visibleClass");
-//       universeImage.classList.add("opcityVisible");
-//     }, 15000);
-
-//     partHidden = setTimeout(() => {
-//       fallingAudio.pause();
-//       buttonBox2.style.display = "block";
-//       // TheMummyDiv.style.display = "block";
-//     }, 20000);
-//   } else {
-//     AnimationButtonDiv.style.display = "flex";
-//     // Toggle OFF
-//     element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
-
-//     GateSlide.pause();
-//     GateSlide.currentTime = 0;
-//     fallingAudio.pause();
-//     fallingAudio.currentTime = 3;
-
-//     clearTimeout(gate);
-//     clearTimeout(waterfall);
-//     clearTimeout(pyramid);
-//     clearTimeout(partVisible);
-//     clearTimeout(partHidden);
-
-//     gateImage.classList.remove("slideGate");
-//     waterfallImage.classList.remove("scaleUp");
-//     pyramidImage.classList.remove("opacityClass");
-//     gateImage.classList.remove("opacityClass");
-//     birdsFly.classList.remove("opacityClass");
-//     universeImage.classList.remove("opacityVisible"); // typo fix
-
-//     part2.classList.remove("visibleClass");
-//     part2.classList.add("hiddenClass");
-//     part2.style.display = "none";
-//     part1.classList.remove("hiddenClass");
-//     part1.style.display = "block";
-
-//     // Reset buttonBox2 or TheMummyDiv if needed
-//     buttonBox2.style.display = "none";
-//     // TheMummyDiv.style.display = "none";
-//   }
-// }
-
-// // PART 2---------------------------------------
-// let hideVideoTimeout;
-// let wasMusicPlayingBeforeVideo = false;
-
-// let RockAudio = new Audio("Assets/Audio/rock.mp3");
-// let DoorAudio = new Audio("Assets/Audio/SecretDoor.mp3");
-// let StressReliefAudio = new Audio("Assets/Audio/StressRelief.mp3");
-// const mummyBackground = document.querySelector(".mummyBackground");
-// function egyptAnimation(element) {
-//   const egyptImage = document.querySelector(".egyptImage");
-
-//   const EgyptVideoDiv = document.querySelector(".EgyptVideoDiv");
-//   const EgyptVideo = document.querySelector(".EgyptVideo");
-//   const TheMummy = document.querySelector(".TheMummy");
-//   const rainVideo = document.querySelector(".rainVideo");
-
-//   const eygptButtonDiv = document.querySelector(".eygptButtonDiv");
-//   const RestartDiv = document.querySelector(".RestartDiv");
-
-//   eygptButtonDiv.style.display = "none";
-
-//   element.classList.toggle("ButtonClass");
-//   if (element.classList.contains("ButtonClass")) {
-//     // Toggle ON
-//     element.innerHTML = `<i class="bi bi-toggle-on"></i> Animation`;
-
-//     egyptImage.classList.add("brightness1");
-//     universeImage.classList.add("brightness1");
-//     EgyptVideoDiv.classList.add("visibleClass");
-
-//     setTimeout(() => {
-//       EgyptVideo.currentTime = 2;
-//       EgyptVideo.play();
-
-//       // Pause background music if it's playing
-//       if (isMusicPlaying) {
-//         wasMusicPlayingBeforeVideo = true;
-//         backgroundMusic.pause();
-//       } else {
-//         wasMusicPlayingBeforeVideo = false;
-//       }
-
-//       EgyptVideo.onended = function () {
-//         if (wasMusicPlayingBeforeVideo) {
-//           backgroundMusic.play();
-//         }
-
-//         EgyptVideoDiv.classList.remove("visibleClass");
-//         egyptImage.classList.remove("brightness1");
-//         universeImage.classList.remove("brightness1");
-
-//         setTimeout(() => {
-//           mummyBackground.classList.add("mummyBackgroundTransform");
-//         }, 2000);
-
-//         setTimeout(() => {
-//           TheMummy.classList.add("mummyTransform");
-//           DoorAudio.currentTime = 0;
-//           DoorAudio.play();
-
-//           setTimeout(() => {
-//             rainVideo.classList.add("rainOpacity");
-//             StressReliefAudio.play();
-//             RestartDiv.classList.add("displayClass");
-//           }, 5000);
-//         }, 7000);
-
-//         RockAudio.play();
-//       };
-//     }, 2000);
-//   } else {
-//     // Toggle OFF
-//     element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
-//   }
-// }
-
-// // MUSIC PART--------------------------------------------------------------------------
-
-// let isMusicPlaying = false;
-
-// function playMusic(clickedButton) {
-//   isMusicPlaying = !isMusicPlaying;
-
-//   if (isMusicPlaying) {
-//     backgroundMusic.play();
-//   } else {
-//     backgroundMusic.pause();
-//   }
-
-//   const allMusicButtons = document.querySelectorAll(
-//     ".buttonBox button, .buttonBox2 button"
-//   );
-
-//   allMusicButtons.forEach((button) => {
-//     const label = button.nextElementSibling?.innerText?.trim();
-//     if (label === "Music" || button === clickedButton) {
-//       if (isMusicPlaying) {
-//         button.classList.add("ButtonClass");
-//         button.innerHTML = '<i class="bi bi-toggle-on"></i> Music';
-//       } else {
-//         button.classList.remove("ButtonClass");
-//         button.innerHTML = '<i class="bi bi-toggle-off"></i> Music';
-//       }
-//     }
-//   });
-// }
-
-// function RestartAnimation(element) {
-//   element.classList.add("ButtonClass");
-//   element.innerHTML = `<i class="bi bi-toggle-on"></i>`;
-
-//   window.location.reload();
-// }
-
 const backgroundMusic = new Audio("Assets/Audio/AlanWalkerMashup.mp3");
 backgroundMusic.loop = true;
 backgroundMusic.preload = "auto";
@@ -306,17 +71,17 @@ function openGateFunction(element) {
   const birdsFly = document.querySelector(".birdsFly");
   const AnimationButtonDiv = document.querySelector(".AnimationButtonDiv");
   const buttonBox2 = document.querySelector(".buttonBox2");
-
+  const RestartDiv = document.querySelector(".RestartDiv");
   element.classList.toggle("ButtonClass");
 
   if (element.classList.contains("ButtonClass")) {
-    AnimationButtonDiv.style.display = "none";
 
-    // Toggle ON
-    element.innerHTML = `<i class="bi bi-toggle-on"></i> Animation`;
     GateSlide.currentTime = 0;
     GateSlide.play();
 
+    AnimationButtonDiv.style.display = "none";
+    RestartDiv.classList.add("displayClass");
+    RestartDiv.classList.add("visibleClass");
     gate = setTimeout(() => {
       gateImage.classList.add("slideGate");
     }, 2000);
@@ -342,40 +107,10 @@ function openGateFunction(element) {
 
     partHidden = setTimeout(() => {
       fallingAudio.pause();
-      buttonBox2.style.display = "block";
-      // TheMummyDiv.style.display = "block";
-    }, 20000);
-  } else {
-    AnimationButtonDiv.style.display = "flex";
-    // Toggle OFF
-    element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
-
-    GateSlide.pause();
-    GateSlide.currentTime = 0;
-    fallingAudio.pause();
-    fallingAudio.currentTime = 3;
-
-    clearTimeout(gate);
-    clearTimeout(waterfall);
-    clearTimeout(pyramid);
-    clearTimeout(partVisible);
-    clearTimeout(partHidden);
-
-    gateImage.classList.remove("slideGate");
-    waterfallImage.classList.remove("scaleUp");
-    pyramidImage.classList.remove("opacityClass");
-    gateImage.classList.remove("opacityClass");
-    birdsFly.classList.remove("opacityClass");
-    universeImage.classList.remove("opacityVisible");
-
-    part2.classList.remove("visibleClass");
-    part2.classList.add("hiddenClass");
-    part2.style.display = "none";
-    part1.classList.remove("hiddenClass");
-    part1.style.display = "block";
-
-    buttonBox2.style.display = "none";
-    // TheMummyDiv.style.display = "none";
+      setTimeout(() => {
+        egyptAnimation(element);
+      }, 1000);
+    }, 17000);
   }
 }
 
@@ -383,73 +118,66 @@ function openGateFunction(element) {
 let hideVideoTimeout;
 let wasMusicPlayingBeforeVideo = false;
 
-function egyptAnimation(element) {
+function egyptAnimation() {
   const egyptImage = document.querySelector(".egyptImage");
   const EgyptVideoDiv = document.querySelector(".EgyptVideoDiv");
   const EgyptVideo = document.querySelector(".EgyptVideo");
   const TheMummy = document.querySelector(".TheMummy");
   const rainVideo = document.querySelector(".rainVideo");
   const { universeImage } = window.animationElements;
-  const eygptButtonDiv = document.querySelector(".eygptButtonDiv");
-  const RestartDiv = document.querySelector(".RestartDiv");
 
-  eygptButtonDiv.style.display = "none";
+  egyptImage.classList.add("brightness1");
+  universeImage.classList.add("brightness1");
+  EgyptVideoDiv.classList.add("visibleClass");
 
-  element.classList.toggle("ButtonClass");
-  if (element.classList.contains("ButtonClass")) {
-    // Toggle ON
-    element.innerHTML = `<i class="bi bi-toggle-on"></i> Animation`;
+  setTimeout(() => {
+    EgyptVideo.currentTime = 2;
+    EgyptVideo.play();
 
-    egyptImage.classList.add("brightness1");
-    universeImage.classList.add("brightness1");
-    EgyptVideoDiv.classList.add("visibleClass");
+    // Pause background music if it's playing
+    if (isMusicPlaying) {
+      wasMusicPlayingBeforeVideo = true;
+      backgroundMusic.pause();
+    } else {
+      wasMusicPlayingBeforeVideo = false;
+    }
 
-    setTimeout(() => {
-      EgyptVideo.currentTime = 2;
-      EgyptVideo.play();
-
-      // Pause background music if it's playing
-      if (isMusicPlaying) {
-        wasMusicPlayingBeforeVideo = true;
-        backgroundMusic.pause();
-      } else {
-        wasMusicPlayingBeforeVideo = false;
+    EgyptVideo.onended = function () {
+      if (wasMusicPlayingBeforeVideo) {
+        backgroundMusic.play();
       }
 
-      EgyptVideo.onended = function () {
-        if (wasMusicPlayingBeforeVideo) {
-          backgroundMusic.play();
-        }
+      EgyptVideoDiv.classList.remove("visibleClass");
+      egyptImage.classList.remove("brightness1");
+      universeImage.classList.remove("brightness1");
 
-        EgyptVideoDiv.classList.remove("visibleClass");
-        egyptImage.classList.remove("brightness1");
-        universeImage.classList.remove("brightness1");
+      setTimeout(() => {
+        const king = document.querySelector(".king");
+        const mummyBackground = document.querySelector(".mummyBackground");
+        king.classList.add("kingTransform");
+        mummyBackground.classList.add("opacityVisible");
+      }, 2000);
+
+      setTimeout(() => {
+        TheMummy.classList.add("mummyTransform");
+        DoorAudio.currentTime = 0;
+        DoorAudio.play();
 
         setTimeout(() => {
-          const mummyBackground = document.querySelector(".mummyBackground");
-          mummyBackground.classList.add("mummyBackgroundTransform");
-        }, 2000);
+          rainVideo.classList.add("rainOpacity");
+          StressReliefAudio.play();
+        }, 5000);
+      }, 7000);
 
-        setTimeout(() => {
-          TheMummy.classList.add("mummyTransform");
-          DoorAudio.currentTime = 0;
-          DoorAudio.play();
-
-          setTimeout(() => {
-            rainVideo.classList.add("rainOpacity");
-            StressReliefAudio.play();
-            RestartDiv.classList.add("displayClass");
-          }, 5000);
-        }, 7000);
-
-        RockAudio.play();
-      };
-    }, 2000);
-  } else {
-    // Toggle OFF
-    element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
-  }
+      RockAudio.play();
+    };
+  }, 2000);
 }
+//  else {
+//   // Toggle OFF
+//   element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
+// }
+// }
 
 // MUSIC PART--------------------------------------------------------------------------
 

@@ -13,6 +13,7 @@ body {
 
 /* Hide main UI by default */
 #fullUI {
+  /*  HIT */
   display: none;
   height: 100vh;
   width: 100vw;
@@ -31,8 +32,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  
 }
 
 #preloader.fade-out {
@@ -130,7 +129,7 @@ img {
   left: 0;
   margin: 10px;
   padding: 10px;
-  background-color: #000;
+  background-color: #000000d5;
   color: aliceblue;
   border-radius: 10px;
   z-index: 2;
@@ -149,6 +148,7 @@ img {
   background-color: transparent;
   color: aliceblue;
   cursor: pointer;
+  font-family: cursive;
   transition: color 0.3s ease;
 }
 
@@ -165,6 +165,9 @@ img {
 .RestartDiv {
   /* border: 1px solid #f10e0e; */
   display: none !important;
+  opacity: 0;
+  visibility: hidden;
+  transition:opacity 3s ease , visibility 3s ease ;
 }
 
 /* PART-2------------------------------------- */
@@ -174,6 +177,14 @@ img {
   height: 100vh;
   transition: opacity 5s ease, visibility 5s ease;
   overflow: hidden;
+}
+
+.egyptImageDiv {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
 }
 
 .egyptImage {
@@ -192,7 +203,7 @@ img {
   z-index: -1;
   width: 100%;
   height: 100%;
-  /* opacity: 0; HIT */
+  opacity: 0;
   transition: filter 3s ease;
 }
 
@@ -225,35 +236,38 @@ img {
 }
 
 .TheMummyDiv {
-  /* border: 5px solid gold; */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
-  
 }
 
 .mummyBackground {
   /* border: 1px solid red; */
+
+  background-image: url("./Assets/Animation/Button.gif");
+  background-position: center;
+  background-size: 100% 100%;
+
   position: absolute;
-  top: 100vh;
+  top: 52vh;
   left: 46%;
   width: 7%;
   height: 35%;
   background-color: #000;
-  transition: 5s ease;
   z-index: -1;
-
-   background-image: url("./Assets/Animation/Button.gif");
-  background-position: center;
-  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
 }
 
 .king {
   padding: 15% 0% 0% 0%;
   height: 80%;
+
+  position: absolute;
+  top: 30vh;
+  transition: 5s ease;
 }
 
 .TheMummy {
@@ -317,8 +331,8 @@ img {
   filter: brightness(0%);
 }
 
-.mummyBackgroundTransform {
-  top: 52vh;
+.kingTransform {
+  top: 0vh;
 }
 
 .mummyTransform {
@@ -346,5 +360,23 @@ img {
   .king {
     padding: 25% 0% 0% 0%;
     height: 80%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .egyptImage {
+    width: 150%;
+  }
+
+  .mummyBackground {
+    left: 43%;
+    width: 13%;
+    height: 35%;
+  }
+
+  .mummyTransform {
+    left: -4vw;
+    width: 180;
   }
 }
