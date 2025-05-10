@@ -1,6 +1,6 @@
 const part1 = document.querySelector(".part1");
 const part2 = document.querySelector(".part2");
-part2.classList.add("hiddenClass");
+part2.classList.add("hiddenClass"); 
 
 let gate, waterfall, pyramid, partVisible, partHidden;
 

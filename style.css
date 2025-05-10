@@ -15,6 +15,9 @@ body {
   height: 100%;
   width: 100%;
   transition: opacity 10s ease, visibility 10s ease;
+
+  /* HIT */
+  /* display: none; */
 }
 
 img {
@@ -28,8 +31,9 @@ img {
 }
 
 .gateImage {
+  height: 165%;
   position: absolute;
-  top: -1vh;
+  top: -35vh;
   left: 0vh;
   z-index: -1;
   transition: 10s ease-in-out, opacity 2s ease;
