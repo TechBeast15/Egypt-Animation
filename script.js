@@ -75,7 +75,6 @@ function openGateFunction(element) {
   element.classList.toggle("ButtonClass");
 
   if (element.classList.contains("ButtonClass")) {
-
     GateSlide.currentTime = 0;
     GateSlide.play();
 
@@ -152,10 +151,14 @@ function egyptAnimation() {
       universeImage.classList.remove("brightness1");
 
       setTimeout(() => {
-        const king = document.querySelector(".king");
         const mummyBackground = document.querySelector(".mummyBackground");
-        king.classList.add("kingTransform");
         mummyBackground.classList.add("opacityVisible");
+
+        setTimeout(() => {
+          const king = document.querySelector(".king");
+          king.classList.add("kingTransform");
+        }, 2000);
+        RockAudio.play();
       }, 2000);
 
       setTimeout(() => {
@@ -169,7 +172,7 @@ function egyptAnimation() {
         }, 5000);
       }, 7000);
 
-      RockAudio.play();
+      
     };
   }, 2000);
 }

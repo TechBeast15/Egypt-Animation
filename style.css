@@ -167,7 +167,7 @@ img {
   display: none !important;
   opacity: 0;
   visibility: hidden;
-  transition:opacity 3s ease , visibility 3s ease ;
+  transition: opacity 3s ease, visibility 3s ease;
 }
 
 /* PART-2------------------------------------- */
@@ -221,6 +221,7 @@ img {
   background-size: 100% 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   z-index: 2;
   opacity: 0;
   visibility: hidden;
@@ -258,7 +259,8 @@ img {
   background-color: #000;
   z-index: -1;
   opacity: 0;
-  transition: opacity 3s ease-in-out;
+  visibility: hidden;
+  transition: opacity 3s ease-in-out , visibility 3s ease;
 }
 
 .king {
@@ -273,7 +275,7 @@ img {
 .TheMummy {
   position: absolute;
   top: 0vh;
-  left: -10vw;
+  left: -20vw;
 
   width: 165%;
   height: 85%;
@@ -324,7 +326,8 @@ img {
 }
 
 .opacityVisible {
-  opacity: 1;
+   opacity: 1;
+  visibility: visible;
 }
 
 .brightness1 {
@@ -355,6 +358,7 @@ img {
 
   .EgyptVideo {
     width: 100%;
+    height: auto;
   }
 
   .king {
@@ -364,7 +368,7 @@ img {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
   .egyptImage {
     width: 150%;
   }
