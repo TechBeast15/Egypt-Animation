@@ -17,7 +17,7 @@ body {
   transition: opacity 10s ease, visibility 10s ease;
 
   /* HIT */
-  /* display: none; */
+  display: none;
 }
 
 img {
@@ -107,12 +107,97 @@ img {
   color: green;
 }
 
+.buttonBox2 {
+  /* HIT */
+  /* display: none; */
+}
+
+.RestartDiv {
+  /* border: 1px solid #f10e0e; */
+  display: none !important;
+}
+
 /* PART-2------------------------------------- */
 .part2 {
   border: 1px solid #000;
   height: 100%;
   width: 100%;
   transition: opacity 5s ease, visibility 5s ease;
+}
+
+.egyptImage {
+  width: 100%;
+  height: 100%;
+  transition: filter 5s ease;
+
+  /* display: none; */
+}
+
+
+.universeImage {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  filter: brightness(120%);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0; HIT */
+  transition: filter 3s ease;
+}
+
+/* VIDEOS-------- */
+.EgyptVideoDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 90px;
+  background-image: url("./Assets/Animation/Pharaoh.gif");
+  background-image: url("https://i.pinimg.com/736x/3a/09/97/3a0997bd5b78816bcaef79444a316463.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 3s ease, visibility 3s ease;
+}
+
+.EgyptVideo {
+  border: 1px solid rgba(240, 248, 255, 0.308);
+  height: 100%;
+  padding: 10px;
+}
+
+
+.TheMummyDiv {
+  border: 5px solid gold;   
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mummyBackground {
+    border: 1px solid red;
+    position: absolute;
+    top: 52vh;
+    left: 46%;
+    width: 7%;
+    height: 27%;
+    background-color: #000;
+}
+
+.TheMummy{
+    position: absolute;
+    top: -2vh;
+    left: -2.1vw;
+    width: 165%;
+    height: 111%;
 }
 
 /* CREATE CLASSES------------------------------------- */
@@ -140,4 +225,12 @@ img {
 .visibleClass {
   opacity: 1;
   visibility: visible;
+}
+
+.opcityVisible {
+  opacity: 1;
+}
+
+.brightness1 {
+  filter: brightness(0%);
 }
