@@ -40,6 +40,17 @@ body {
   pointer-events: none;
 }
 
+#preloader h1 {
+  font-size: 3rem;
+  font-family: fantasy;
+  
+  background: url("./Assets/Animation/LoadingButton.gif"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Button style (optional) */
 #enterButton {
   margin-top: 20px;
@@ -48,13 +59,12 @@ body {
   font-family: cursive;
   cursor: pointer;
   color: rgb(255, 255, 255);
-
   border: none;
-  box-shadow: inset 0px 0px 1px white;
-  text-shadow: inset 0px 0px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px white;
   background-image: url("./Assets/Animation/Button.gif");
   background-position: center;
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 /* PART 1---------------------------- */
@@ -247,7 +257,7 @@ img {
 .mummyBackground {
   /* border: 1px solid red; */
 
-  background-image: url("./Assets/Animation/Button.gif");
+  background-image: url("./Assets/Animation/mummyBackground.gif");
   background-position: center;
   background-size: 100% 100%;
 
@@ -260,7 +270,7 @@ img {
   z-index: -1;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 3s ease-in-out , visibility 3s ease;
+  transition: opacity 3s ease-in-out, visibility 3s ease;
 }
 
 .king {
@@ -326,7 +336,7 @@ img {
 }
 
 .opacityVisible {
-   opacity: 1;
+  opacity: 1;
   visibility: visible;
 }
 
@@ -382,5 +392,22 @@ img {
   .mummyTransform {
     left: -4vw;
     width: 180;
+  }
+
+  #preloader h1 {
+  }
+  #enterButton {
+    margin-top: 20px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    font-family: cursive;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px white;
+    background-image: url("./Assets/Animation/Button.gif");
+    background-position: center;
+    background-size: 100% 100%;
   }
 }
