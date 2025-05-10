@@ -105,11 +105,9 @@ function openGateFunction(element) {
     }, 15000);
 
     partHidden = setTimeout(() => {
+      egyptAnimation(element);
       fallingAudio.pause();
-      setTimeout(() => {
-        egyptAnimation(element);
-      }, 1000);
-    }, 17000);
+    }, 18000);
   }
 }
 
@@ -171,16 +169,9 @@ function egyptAnimation() {
           StressReliefAudio.play();
         }, 5000);
       }, 7000);
-
-      
     };
   }, 2000);
 }
-//  else {
-//   // Toggle OFF
-//   element.innerHTML = `<i class="bi bi-toggle-off"></i> Animation`;
-// }
-// }
 
 // MUSIC PART--------------------------------------------------------------------------
 
