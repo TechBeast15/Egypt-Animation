@@ -185,27 +185,29 @@ img {
 }
 
 .mummyBackground {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   position: absolute;
-  top: 52vh;
+  top: 100vh;
   left: 46%;
   width: 7%;
   height: 35%;
   background-color: #000;
+  transition: 5s ease;
   z-index: -1;
 }
 
 .king {
+  padding: 15% 0% 0% 0%;
   height: 80%;
 }
 
 .TheMummy {
   position: absolute;
-  top: -1vh;
-  left: -2.1vw;
+  top: 0vh;
+  left: -10vw;
   width: 165%;
   height: 85%;
-
+  transition: 5s ease;
   /* display: none; */
 }
 
@@ -242,4 +244,12 @@ img {
 
 .brightness1 {
   filter: brightness(0%);
+}
+
+.mummyBackgroundTransform {
+  top: 52vh;
+}
+
+.mummyTransform {
+  left: -2.1vw;
 }

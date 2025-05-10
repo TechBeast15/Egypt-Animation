@@ -99,13 +99,13 @@ let wasMusicPlayingBeforeVideo = false;
 let RockAudio = new Audio("Assets/Audio/rock.mp3");
 let DoorAudio = new Audio("Assets/Audio/SecretDoor.mp3");
 let StressReliefAudio = new Audio("Assets/Audio/StressRelief.mp3");
-
+const mummyBackground = document.querySelector(".mummyBackground");
 function egyptAnimation(element) {
   const egyptImage = document.querySelector(".egyptImage");
 
   const EgyptVideoDiv = document.querySelector(".EgyptVideoDiv");
   const EgyptVideo = document.querySelector(".EgyptVideo");
-  console.log(EgyptVideo);
+  const TheMummy = document.querySelector(".TheMummy");
 
   const eygptButtonDiv = document.querySelector(".eygptButtonDiv");
   const RestartDiv = document.querySelector(".RestartDiv");
@@ -142,7 +142,18 @@ function egyptAnimation(element) {
         egyptImage.classList.remove("brightness1");
         universeImage.classList.remove("brightness1");
 
-        
+        setTimeout(() => {
+          mummyBackground.classList.add("mummyBackgroundTransform");
+          
+        }, 2000);
+
+        setTimeout(() => {
+          TheMummy.classList.add("mummyTransform");
+          DoorAudio.currentTime = 0;
+          DoorAudio.play();
+        }, 7000);
+
+        RockAudio.play();
       };
     }, 2000);
   } else {
