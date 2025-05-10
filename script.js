@@ -1,6 +1,6 @@
 const part1 = document.querySelector(".part1");
 const part2 = document.querySelector(".part2");
-// part2.classList.add("hiddenClass"); HIT
+part2.classList.add("hiddenClass"); 
 const universeImage = document.querySelector(".universeImage");
 
 let gate, waterfall, pyramid, partVisible, partHidden;
@@ -106,6 +106,7 @@ function egyptAnimation(element) {
   const EgyptVideoDiv = document.querySelector(".EgyptVideoDiv");
   const EgyptVideo = document.querySelector(".EgyptVideo");
   const TheMummy = document.querySelector(".TheMummy");
+  const rainVideo = document.querySelector(".rainVideo");
 
   const eygptButtonDiv = document.querySelector(".eygptButtonDiv");
   const RestartDiv = document.querySelector(".RestartDiv");
@@ -144,13 +145,18 @@ function egyptAnimation(element) {
 
         setTimeout(() => {
           mummyBackground.classList.add("mummyBackgroundTransform");
-          
         }, 2000);
 
         setTimeout(() => {
           TheMummy.classList.add("mummyTransform");
           DoorAudio.currentTime = 0;
           DoorAudio.play();
+
+          setTimeout(() => {
+            rainVideo.classList.add("rainOpacity");
+            StressReliefAudio.play();
+            RestartDiv.classList.add("displayClass");
+          }, 5000);
         }, 7000);
 
         RockAudio.play();
@@ -193,4 +199,13 @@ function playMusic(clickedButton) {
       }
     }
   });
+}
+
+
+
+function RestartAnimation(element) {
+  element.classList.add("ButtonClass");
+  element.innerHTML = `<i class="bi bi-toggle-on"></i>`;
+
+  window.location.reload();
 }
