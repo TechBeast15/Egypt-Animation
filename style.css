@@ -188,16 +188,23 @@ img {
     top: 52vh;
     left: 46%;
     width: 7%;
-    height: 27%;
+    height: 35%;
     background-color: #000;
+    z-index: -1;
+}
+
+.king{
+    height: 80%;
 }
 
 .TheMummy{
     position: absolute;
-    top: -2vh;
+    top: -1vh;
     left: -2.1vw;
     width: 165%;
-    height: 111%;
+    height: 85%;
+
+    /* display: none; */
 }
 
 /* CREATE CLASSES------------------------------------- */
