@@ -30,7 +30,7 @@ window.onload = function () {
   // Create the Enter button
   const enterButton = document.createElement("button");
   enterButton.id = "enterButton";
-  enterButton.textContent = "Enter Site";
+  enterButton.textContent = "Start";
   preloader.appendChild(enterButton);
 
   let hasEntered = false;

@@ -43,7 +43,7 @@ body {
 #preloader h1 {
   font-size: 3rem;
   font-family: fantasy;
-  
+
   background: url("./Assets/Animation/LoadingButton.gif"); /* Replace with your image path */
   background-size: cover;
   background-position: center;
@@ -53,18 +53,20 @@ body {
 
 /* Button style (optional) */
 #enterButton {
+  background-image: url("./Assets/Animation/Button.gif");
+  background-position: center;
+  background-size: 100% 100%;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 10px 25px;
   font-size: 1.3rem;
+  font-weight: 600;
   font-family: cursive;
   cursor: pointer;
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 10px;
-  box-shadow: inset 0px 0px 10px white;
-  background-image: url("./Assets/Animation/Button.gif");
-  background-position: center;
-  background-size: 100% 100%;
+  box-shadow: inset 0px 0px 7px white;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 /* PART 1---------------------------- */
