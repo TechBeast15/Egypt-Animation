@@ -11,6 +11,55 @@ body {
   /* background-color: #000; */
 }
 
+/* Hide main UI by default */
+#fullUI {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Fullscreen preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: #000; /* dark background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+}
+
+/* Button style (optional) */
+#enterButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-family: cursive;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+
+  border: none;
+  box-shadow: inset 0px 0px 1px white;
+  text-shadow: inset 0px 0px 10px rgb(0, 0, 0);
+  background-image: url("./Assets/Animation/Button.gif");
+  background-position: center;
+  background-size: 100% auto;
+}
+
+/* PART 1---------------------------- */
+
 .part1 {
   /* border: 1px solid #000; */
   height: 100%;
@@ -41,7 +90,7 @@ img {
 }
 
 .waterfallset {
-  border: 3px solid #2600ff !important;
+  /* border: 3px solid #2600ff !important; */
   position: absolute;
   top: 0;
   left: 0;
@@ -182,6 +231,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+
+  
 }
 
 .mummyBackground {
@@ -194,6 +245,10 @@ img {
   background-color: #000;
   transition: 5s ease;
   z-index: -1;
+
+   background-image: url("./Assets/Animation/Button.gif");
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .king {
@@ -254,7 +309,7 @@ img {
   visibility: visible;
 }
 
-.opcityVisible {
+.opacityVisible {
   opacity: 1;
 }
 
