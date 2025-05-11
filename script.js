@@ -1,3 +1,14 @@
+
+  // Disable right-click and some mouse button clicks
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('mousedown', e => {
+    if (e.button === 2 || e.which === 3) {
+      e.preventDefault();
+    }
+  });
+
+
+
 const backgroundMusic = new Audio("Assets/Audio/AlanWalkerMashup.mp3");
 backgroundMusic.loop = true;
 backgroundMusic.preload = "auto";
