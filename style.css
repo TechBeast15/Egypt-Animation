@@ -412,4 +412,8 @@ img {
     background-position: center;
     background-size: 100% 100%;
   }
+
+  .buttonBox div button {
+    font-family: sans-serif;
+  }
 }
